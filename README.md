@@ -41,6 +41,37 @@ magicButton.setMagicButtonClickListener(new View.OnClickListener() {
 });
 ```
 
+# Import
+
+## Gradle
+
+```groovy
+dependencies {
+    compile 'com.github.bloder:magic:1.0'
+}
+```
+
+## Maven
+
+```xml
+<dependency>
+  <groupId>com.github.bloder</groupId>
+  <artifactId>magic</artifactId>
+  <version>1.0</version>
+  <type>pom</type>
+</dependency>
+
+```
+
+## Ivy
+
+```xml
+<dependency org='com.github.bloder' name='magic' rev='1.0'>
+  <artifact name='$AID' ext='pom'></artifact>
+</dependency>
+
+```
+
 # License
 
 ```
