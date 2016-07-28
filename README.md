@@ -1,3 +1,5 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MagicButton-green.svg?style=true)](https://android-arsenal.com/details/1/3988)
+
 # Magic Button
 
 ![alt tag](http://www.clipartlord.com/wp-content/uploads/2015/10/magic-wand2.png)
