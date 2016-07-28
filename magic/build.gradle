@@ -1,4 +1,11 @@
 apply plugin: 'com.android.library'
+apply plugin: "maven-publish"
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven'
+
+version = "1.0"
+group = 'com.github.bloder'
 
 android {
     compileSdkVersion 23
@@ -14,6 +21,81 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+
+                name 'MagicButton'
+                description = 'Android field validation lib'
+                url 'https://github.com/daniel-martins-IR/MagicButton'
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'bloder'
+                        name 'Bloder'
+                        email 'aptgetinstalldanielleme@gmail.com'
+                    }
+                }
+                scm {
+                    connection 'https://github.com/daniel-martins-IR/MagicButton.git'
+                    developerConnection 'https://github.com/daniel-martins-IR/MagicButton.git'
+                    url 'https://github.com/daniel-martins-IR/MagicButton'
+                }
+            }
+        }
+    }
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+    configurations = ['archives']
+    pkg {
+        repo = 'maven'
+        name = 'MagicButton'
+        licenses = ['Apache-2.0']
+        websiteUrl = 'https://github.com/daniel-martins-IR/MagicButton'
+        vcsUrl = 'https://github.com/daniel-martins-IR/MagicButton.git'
+        publish = true
+        version {
+            gpg {
+                sign = true
+                passphrase = properties.getProperty("bintray.gpg.password")
+            }
         }
     }
 }
