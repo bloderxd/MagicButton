@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MagicButton">
+        <attr name="hide_text" format="string" />
+        <attr name="expandable_area_color" format="color" />
+        <attr name="icon_button_color" format="color" />
+        <attr name="magic_button_size" format="dimension"/>
+        <attr name="button_icon" format="integer" />
+        <attr name="button_icon_width" format="dimension" />
+        <attr name="button_icon_height" format="dimension" />
+        <attr name="hide_text_size" format="dimension" />
+    </declare-styleable>
+</resources>
