@@ -9,5 +9,6 @@
         <attr name="button_icon_width" format="dimension" />
         <attr name="button_icon_height" format="dimension" />
         <attr name="hide_text_size" format="dimension" />
+        <attr name="hide_text_color" format="color" />
     </declare-styleable>
 </resources>
