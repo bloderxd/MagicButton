@@ -32,6 +32,7 @@ public class MagicButton extends FrameLayout {
   private String buttonText;
   private int expandableButtonColor;
   private int iconButtonColor;
+  private int textColor;
   private OnClickListener onClickListener;
 
   public MagicButton(Context context) {
@@ -46,6 +47,7 @@ public class MagicButton extends FrameLayout {
       buttonText = typedArray.getString(R.styleable.MagicButton_hide_text);
       expandableButtonColor = typedArray.getColor(R.styleable.MagicButton_expandable_area_color, Color.parseColor("#FFE6E4E4"));
       iconButtonColor = typedArray.getColor(R.styleable.MagicButton_icon_button_color, Color.parseColor("#FFE6E4E4"));
+      textColor = typedArray.getColor(R.styleable.MagicButton_hide_text_color, Color.parseColor("#FFE6E4E4"));
       drawable = typedArray.getDrawable(R.styleable.MagicButton_button_icon);
     }
     initView(context);
@@ -72,6 +74,7 @@ public class MagicButton extends FrameLayout {
     ((GradientDrawable) button.getBackground()).setColor(expandableButtonColor);
     ((GradientDrawable) buttonIcon.getBackground()).setColor(iconButtonColor);
     text.setText(buttonText);
+    text.setTextColor(textColor);
     setSizes();
   }
 
