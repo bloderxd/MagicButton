@@ -26,6 +26,8 @@ You just need to add this in your layout.
         app:button_icon_width="25dp"
         app:button_icon_height="25dp"
         app:hide_text="Hi Mom!"
+        app:hide_text_size="15dp"
+        app:hide_text_color="@android:color/black"
         app:icon_button_color="button_icon_color"
         app:expandable_area_color="that_expandable_button_part_color"/>
 ```
