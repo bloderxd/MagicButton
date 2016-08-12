@@ -1,3 +1,5 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-MagicButton-green.svg?style=true)](https://android-arsenal.com/details/1/3988)
+
 # Magic Button
 
 ![alt tag](http://www.clipartlord.com/wp-content/uploads/2015/10/magic-wand2.png)
@@ -39,6 +41,37 @@ magicButton.setMagicButtonClickListener(new View.OnClickListener() {
         yourAction();
       }
 });
+```
+
+# Import
+
+## Gradle
+
+```groovy
+dependencies {
+    compile 'com.github.bloder:magic:1.0'
+}
+```
+
+## Maven
+
+```xml
+<dependency>
+  <groupId>com.github.bloder</groupId>
+  <artifactId>magic</artifactId>
+  <version>1.0</version>
+  <type>pom</type>
+</dependency>
+
+```
+
+## Ivy
+
+```xml
+<dependency org='com.github.bloder' name='magic' rev='1.0'>
+  <artifact name='$AID' ext='pom'></artifact>
+</dependency>
+
 ```
 
 # License
