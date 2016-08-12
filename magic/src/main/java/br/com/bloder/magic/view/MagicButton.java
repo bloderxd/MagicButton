@@ -82,7 +82,7 @@ public class MagicButton extends FrameLayout {
     buttonIcon.getLayoutParams().height = (int) typedArray.getDimension(R.styleable.MagicButton_magic_button_size, 50);
     icon.getLayoutParams().width = (int) typedArray.getDimension(R.styleable.MagicButton_button_icon_width, 25);
     icon.getLayoutParams().height = (int) typedArray.getDimension(R.styleable.MagicButton_button_icon_height, 25);
-    text.setTextSize(typedArray.getDimension(R.styleable.MagicButton_magic_button_size , 20) / 7);
+    text.setTextSize(typedArray.getDimension(R.styleable.MagicButton_hide_text_size , 15));
   }
 
   private void baseAction() {
