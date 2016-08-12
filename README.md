@@ -51,7 +51,7 @@ magicButton.setMagicButtonClickListener(new View.OnClickListener() {
 
 ```groovy
 dependencies {
-    compile 'com.github.bloder:magic:1.0'
+    compile 'com.github.bloder:magic:1.1'
 }
 ```
 
@@ -61,7 +61,7 @@ dependencies {
 <dependency>
   <groupId>com.github.bloder</groupId>
   <artifactId>magic</artifactId>
-  <version>1.0</version>
+  <version>1.1</version>
   <type>pom</type>
 </dependency>
 
@@ -70,7 +70,7 @@ dependencies {
 ## Ivy
 
 ```xml
-<dependency org='com.github.bloder' name='magic' rev='1.0'>
+<dependency org='com.github.bloder' name='magic' rev='1.1'>
   <artifact name='$AID' ext='pom'></artifact>
 </dependency>
 
