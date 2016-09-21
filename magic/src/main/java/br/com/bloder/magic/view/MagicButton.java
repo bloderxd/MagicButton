@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import br.com.bloder.magic.Magic;
+import br.com.bloder.magic.MagicKt;
 import br.com.bloder.magic.R;
 
 /**
@@ -98,7 +98,7 @@ public class MagicButton extends FrameLayout {
           text.setVisibility(GONE);
           if(onClickListener != null) onClickListener.onClick(button);
         }
-        new Magic().doWith(v);
+        MagicKt.doWith(v);
       }
     });
   }
